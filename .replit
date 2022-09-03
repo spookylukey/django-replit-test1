@@ -1,12 +1,12 @@
 # The command that runs the program.
-run = ["python3", "manage.py", "runserver", "0.0.0.0:3000"]
+run = ["python3", "code/manage.py", "runserver", "0.0.0.0:3000"]
 # The primary language of the repl. There can be others, though!
 language = "python3"
 # The main file, which will be shown by default in the editor.
-entrypoint = "manage.py"
+entrypoint = "code/manage.py"
 # A list of globs that specify which files and directories should
 # be hidden in the workspace.
-hidden = ["venv", ".config", "**/__pycache__", "**/.mypy_cache", "**/*.pyc"]
+hidden = ["**/__pycache__", "**/.mypy_cache", "**/*.pyc"]
 
 # Specifies which nix channel to use when building the environment.
 [nix]
@@ -30,7 +30,7 @@ syntax = "python"
 [env]
 VIRTUAL_ENV = "/home/runner/${REPL_SLUG}/venv"
 PATH = "${VIRTUAL_ENV}/bin"
-PYTHONPATH="${VIRTUAL_ENV}/lib/python3.8/site-packages"
+PYTHONPATH="${VIRTUAL_ENV}/lib/python3.10/site-packages"
 REPLIT_POETRY_PYPI_REPOSITORY="https://package-proxy.replit.com/pypi/"
 MPLBACKEND="TkAgg"
 
